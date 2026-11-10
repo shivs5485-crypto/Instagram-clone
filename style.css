@@ -1,0 +1,295 @@
+/* ===== GLOBAL STYLING ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fff, #f8f5ff);
+    color: #262626;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 18px 8%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.heading h2 {
+    font-family: cursive;
+    font-size: 27px;
+    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+/* ===== MAIN PROFILE ===== */
+main {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.06);
+    animation: fadeUp 1s ease;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== PROFILE PICTURE ===== */
+.profile-picture {
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf);
+    transition: transform 0.4s ease;
+}
+
+.profile-picture:hover {
+    transform: rotate(8deg) scale(1.08);
+}
+
+.main-img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    display: block;
+}
+
+/* ===== PROFILE STATS ===== */
+.post,
+.followers,
+.following {
+    text-align: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.post:hover,
+.followers:hover,
+.following:hover {
+    transform: translateY(-6px);
+    color: #d62976;
+}
+
+.post h4,
+.followers h4,
+.following h4 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.post h3,
+.followers h3,
+.following h3 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #777;
+}
+
+/* ===== FOLLOW BUTTON ===== */
+.button {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.button button {
+    width: 85%;
+    max-width: 350px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #0095f6, #4f65e9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 149, 246, 0.2);
+}
+
+.button button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 149, 246, 0.35);
+}
+
+.button button:active {
+    transform: scale(0.96);
+}
+
+/* ===== BIO ===== */
+.bio {
+    margin: 25px 0;
+}
+
+.bio textarea {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px;
+    resize: vertical;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fafafa;
+    transition: 0.3s ease;
+}
+
+.bio textarea:focus {
+    border-color: #c13584;
+    box-shadow: 0 0 12px rgba(193, 53, 132, 0.12);
+    background: white;
+}
+
+.bio textarea::placeholder {
+    color: #aaa;
+}
+
+/* ===== HIGHLIGHTS ===== */
+.sub-profil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.sub-profile {
+    width: 75px;
+    height: 75px;
+    padding: 3px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.sub-profile img {
+    width: 100%;
+    height: 100%;
+    border: 3px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sub-profile:hover {
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: 0 5px 18px rgba(214, 41, 118, 0.25);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+
+footer hr {
+    margin: 15px auto;
+    max-width: 600px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #d62976;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #833ab4;
+    text-decoration: underline;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    main {
+        margin: 20px 12px;
+        padding: 18px 12px;
+    }
+
+    .profile {
+        gap: 18px;
+    }
+
+    .main-img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .post h4,
+    .followers h4,
+    .following h4 {
+        font-size: 19px;
+    }
+
+    .post h3,
+    .followers h3,
+    .following h3 {
+        font-size: 13px;
+    }
+
+    .sub-profile {
+        width: 62px;
+        height: 62px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* ===== REDUCED MOTION ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
